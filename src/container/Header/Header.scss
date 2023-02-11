@@ -1,0 +1,155 @@
+.header {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 2rem;
+    display: flex;
+    overflow: hidden;
+
+    @media screen and (max-width: 900px) {
+        flex-direction: column-reverse;
+        padding-top: 24px;
+    }
+
+    @media screen and (max-width: 400px) {
+        padding: 120px 1rem;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media screen and (max-width: 900px) {
+            align-items: center;
+        }
+
+        &-title {
+            font-size: 3rem;
+
+            @media screen and (max-width: 900px) {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+
+        &-resume {
+            width: 240px;
+            padding: 12px 24px;
+            text-align: center;
+
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+
+            background-image: linear-gradient(var(--secondary-color), var(--secondary-color));
+            background-color: transparent;
+            background-size: 0 100%;
+            background-repeat: no-repeat;
+
+            margin-top: 32px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: .5s;
+
+            &:hover {
+                background-size: 100% 100%;
+                color: white;
+            }
+
+            @media screen and (max-width: 400px) {
+                width: 180px;
+                padding: 8px 12px;
+            }
+        }
+
+        .Typewriter {
+            font-size: 2rem;
+            color: var(--gray-color);
+
+            @media screen and (max-width: 900px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+            @media screen and (max-width: 900px) {
+                width: 60%;
+                height: 60%;
+                object-fit: contain;
+            }
+        }
+
+        &__badge-greeting {
+            border-radius: 4px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            @media screen and (max-width: 1200px) {
+                display: none;
+            }
+        }
+
+        &__badge-tech {
+            flex: 0.75;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            height: 100%;
+            margin-left: 1rem;
+
+            div {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                background: var(--white-color);
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+                img {
+                    width: 60%;
+                    height: 60%;
+                }
+            }
+
+            div:nth-child(1) {
+                width: 100px;
+                height: 100px;
+            }
+
+            div:nth-child(2) {
+                margin: 1.75rem;
+                width: 150px;
+                height: 150px;
+            }
+
+            div:nth-child(3) {
+                width: 70px;
+                height: 70px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                display: none;
+            }
+        }
+    }
+}

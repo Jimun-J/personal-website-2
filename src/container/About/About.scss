@@ -1,0 +1,123 @@
+.about {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 2rem;
+
+    @media screen and (max-width: 900px) {
+        padding-top: 24px;
+    }
+
+    h3 {
+        color: var(--secondary-color);
+    }
+
+    &__description {
+        display: flex;
+        justify-content: center;
+        padding-top: 24px;
+        gap: 60px;
+        
+
+        @media screen and (max-width: 1240px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        @media screen and (max-width: 900px) {
+            padding-top: 24px;
+        }
+
+        h1 {
+            flex: 1;
+            font-size: 2rem;
+            font-weight: 600;
+
+            @media screen and (max-width: 1240px) {
+                font-size: 3rem;
+            }
+
+            @media screen and (max-width: 900px) {
+                font-size: 2rem;
+            }
+
+            @media screen and (max-width: 520px) {
+                font-size: 1rem;
+            }
+        }
+
+        p {
+            flex: 1;
+            font-size: 1.3rem;
+
+            @media screen and (max-width: 900px) {
+                font-size: 1rem;
+            }
+
+            @media screen and (max-width: 520px) {
+                font-size: 0.7rem;
+            }
+
+            @media screen and (max-width: 300px) {
+                display: none;
+            }
+        }
+    }
+
+    &__gallery {
+        margin-top: 78px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 24px;
+
+        @media screen and (max-width: 900px) {
+            margin-top: 42px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media screen and (max-width: 520px) {
+            margin-top: 42px;
+            grid-template-columns: 1fr;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &-item2 {
+            grid-column-start: 2;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+
+            @media screen and (max-width: 900px) {
+                grid-column-start: 2;
+                grid-row-start: 1;
+                grid-row-end: span 1;
+            }
+
+            @media screen and (max-width: 520px) {
+                display: none;
+            }
+        }
+
+        &-item3 {
+            grid-column-start: 3;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+
+            @media screen and (max-width: 900px) {
+                grid-column-start: 2;
+                grid-row-start: 2;
+                grid-row-end: span 1;
+            }
+
+            @media screen and (max-width: 520px) {
+                display: none;
+            }
+        }
+
+    }
+}

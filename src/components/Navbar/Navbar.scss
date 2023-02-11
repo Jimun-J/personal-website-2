@@ -1,0 +1,132 @@
+.navbar {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-bottom: 1px solid rgba(184, 184, 184, 0.18);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    @media screen and (max-width: 400px) {
+        padding: 1rem;
+    }
+
+
+    &__logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+
+        a {
+            text-decoration: none;
+            color: var(--black-color);
+
+            &:hover {
+                color: var(--gray-color);
+            }
+        }
+    }
+
+    &__navigation {
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        button {
+            display: none;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            z-index: 3;
+
+            @media screen and (max-width: 900px) {
+                display: initial;
+            }
+        }
+
+        li {
+            margin: 0 1rem;
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            div {
+                width: 5px;
+                height: 5px;
+                background: transparent;
+                border-radius: 50%;
+                margin-top: 5px;
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--black-color);
+                text-transform: capitalize;
+            }
+
+            &:hover {
+                div {
+                    background: var(--secondary-color);
+                    display: initial;
+                }
+
+                a {
+                    color: var(--secondary-color);
+                }
+            }
+
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+        }
+    }
+
+    &__navigation-mobile {
+        width: 100%;
+        display: none;
+        border-bottom: 1px solid rgba(184, 184, 184, 0.18);
+
+        position: absolute;
+        top: 94px;
+        left: 0;
+        z-index: 2;
+
+        background-color: var(--white-color);
+
+        @media screen and (max-width: 400px) {
+            top: 62px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 24px;
+            margin: 12px 0;
+            text-align: center;
+            a {
+                text-decoration: none;
+                color: var(--black-color);
+                display: block;
+                text-transform: capitalize;
+            }
+        }  
+    }
+
+    &__navigation-mobile.active {
+        display: block;
+    }
+}

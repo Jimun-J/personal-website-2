@@ -1,0 +1,53 @@
+.work {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 2rem;
+
+    @media screen and (max-width: 900px) {
+        padding-top: 24px;
+    }
+
+    h3 {
+        color: var(--secondary-color);
+    }
+
+    &__description {
+        padding-top: 24px;
+
+        h1 {
+            font-size: 2rem;
+
+            @media screen and (max-width: 520px) {
+                font-size: 1.3rem;
+            }
+            
+        }
+
+        span {
+            color: var(--secondary-color);
+        }
+    }
+
+    &__categories {
+        padding-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        
+        div {
+            display: inline-block;
+            padding: 10px;
+            background-color: var(--lightGray-color);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        div.active {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
